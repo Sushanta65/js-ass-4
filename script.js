@@ -1,5 +1,3 @@
-// Problem - 1 : Tax Calculator Funcation Starts Here
-
 function calculateTax(income, expenses) {
   const netIncome = income - expenses;
 
@@ -7,26 +5,22 @@ function calculateTax(income, expenses) {
     tax = netIncome * 0.2;
     return tax;
   } else {
-    return '"Invalid Input"';
+    return "Invalid Input";
   }
 }
-// Tax Calculator Function Ends Here.
 
-// Problem - 02 : Send Notification Function Starts Here
 
 function sendNotification(email) {
   if (email.indexOf("@") > -1) {
-    const emailNameAndDomain = email.split("@"); // Sepatate The String by @ and put into an array.
-    const emailName = emailNameAndDomain[0]; // texts bofore @;
-    const emailDomain = emailNameAndDomain[1]; // texts after @,
-    return emailName + " sent you an email from " + emailDomain; // Return the full text.
+    const emailNameAndDomain = email.split("@");
+    const emailName = emailNameAndDomain[0];
+    const emailDomain = emailNameAndDomain[1];
+    return emailName + " sent you an email from " + emailDomain;
   } else {
-    return '"Invalid Input"';
+    return "Invalid Email";
   }
 }
-// Send Notification Function Ends Here
 
-// Problem - 03 : Check Digits In Name Funcation Stars Here
 
 function checkDigitsInName(name) {
   let isDigits;
@@ -41,26 +35,24 @@ function checkDigitsInName(name) {
     }
     return isDigits;
   } else {
-    return '"Invalid Input"';
+    return "Invalid Input";
   }
 }
 
-//Check Digits In Name Function Ends Here
 
-// Problem - 04 : Calculate Final Score Function Starts Here
 
 function calculateFinalScore(obj) {
-  let finalScore; //final score container. true or false.
+  let finalScore;
   if (typeof obj == "object") {
     if (obj.isFFamily) {
-      totalScore = obj.testScore + obj.schoolGrade + 20; //parent proffesion farmer score +20;
+      totalScore = obj.testScore + obj.schoolGrade + 20;
       finalScore = totalScore;
     } else {
       totalScore = obj.testScore + obj.schoolGrade;
       finalScore = totalScore;
     }
   } else {
-    return '"Invalid Input"';
+    return "Invalid Input";
   }
 
   if (finalScore >= 80) {
@@ -70,9 +62,6 @@ function calculateFinalScore(obj) {
   }
 }
 
-// Calculate Final Score Funcation Ends Here
-
-// Problem - 05 : Waiting Time Function Starts Here
 
 function waitingTime(waitingTimes, serialNumber) {
   if (Array.isArray(waitingTimes) && typeof serialNumber == "number") {
@@ -84,11 +73,9 @@ function waitingTime(waitingTimes, serialNumber) {
 
     let peopleLeft = serialNumber - 1 - waitingTimes.length;
 
-    let needTime = peopleLeft * averageTime;
-    return needTime;
+    let remainingTime = peopleLeft * averageTime;
+    return remainingTime;
   } else {
-    return '"Invalid Input"';
+    return "Invalid Input";
   }
 }
-
-// Waitaing Time Function Ends Here
